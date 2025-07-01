@@ -4,6 +4,7 @@ const treinos = [
     dia: "Treino A – Peito + Tríceps",
     tecnica: "Bi-Set e Drop-set",
     objetivo: "Hipertrofia e intensidade",
+    tipo: "normal",
     exercicios: [
       ["Supino reto + Crucifixo reto", "4", "12-10-8-6", "Drop-set", "Drop na última série"],
       ["Supino inclinado + Cross-over", "3", "12", "Bi-set", "-"],
@@ -16,6 +17,7 @@ const treinos = [
     dia: "Treino B – Costas + Bíceps",
     tecnica: "Rest-pause e Técnica Lenta",
     objetivo: "Força e controle neuromuscular",
+    tipo: "normal",
     exercicios: [
       ["Barra fixa", "4", "Falha", "-", "-"],
       ["Remada curvada", "3", "10", "Cadência 3:1", "-"],
@@ -28,6 +30,7 @@ const treinos = [
     dia: "Treino C – Pernas completas",
     tecnica: "Pirâmide + Falha",
     objetivo: "Desenvolvimento de força e volume",
+    tipo: "normal",
     exercicios: [
       ["Agachamento livre", "5", "15-12-10-8-6", "Pirâmide", "-"],
       ["Leg press 45°", "4", "12", "-", "-"],
@@ -40,6 +43,7 @@ const treinos = [
     dia: "Treino D – Ombros + Trapézio",
     tecnica: "Técnica 21 + Drop-set",
     objetivo: "Definição e hipertrofia",
+    tipo: "normal",
     exercicios: [
       ["Elevação lateral", "3", "21 reps (7+7+7)", "Técnica 21", "-"],
       ["Desenvolvimento com halteres", "3", "10", "Drop-set na última", "-"],
@@ -52,6 +56,7 @@ const treinos = [
     dia: "Treinos de Corrida – Híbrido",
     tecnica: "Variedade de estímulos",
     objetivo: "Resistência e VO2máx",
+    tipo: "normal",
     exercicios: [
       ["Corrida leve", "1", "30min", "Pace 5:30", "Base aeróbica"],
       ["Intervalado", "5x800m", "Rec 2min", "Pace 4:10", "VO2máx"],
@@ -59,7 +64,8 @@ const treinos = [
       ["HIIT", "10x200m", "-", "Pace 4:00", "Neuromuscular"],
       ["Longão", "1", "10km", "Pace 5:00", "Resistência mental"]
     ]
-  }, // Dieta
+  },
+  // Dieta
   {
     dia: "Dieta Econômica e Inteligente",
     tecnica: "Baixo custo",
@@ -78,10 +84,12 @@ const treinos = [
     dia: "Suplementação Inteligente",
     tecnica: "Acessível",
     objetivo: "Recuperação e performance",
+    tipo: "normal",
     exercicios: [
-      ["Whey Protein", "Pós-treino"],
-      ["Creatina","3-5g/dia"],
-      ["Multivitamínico","1 comp/dia"]
+      ["Whey Protein", "1 dose", "Pós-treino", "-", "Se possível"],
+      ["Alternativa", "-", "-", "-", "3 ovos ou leite com banana"],
+      ["Creatina", "3-5g/dia", "-", "-", "Altamente eficaz"],
+      ["Multivitamínico", "1 comp/dia", "-", "-", "Farmácia popular"]
     ]
   }
 ];
@@ -99,14 +107,25 @@ treinos.forEach((treino, i) => {
     <p><strong>Objetivo:</strong> ${treino.objetivo}</p>
     <table class="exercise-table">
       <thead>
-        <tr>
+        <tr>`;
+
+  // Cabeçalho condicional
+  if (treino.tipo === "dieta") {
+    html += `
+          <th>✔</th>
+          <th>Refeição</th>
+          <th>Descrição</th>`;
+  } else {
+    html += `
           <th>✔</th>
           <th>Exercício</th>
           <th>Séries</th>
           <th>Reps</th>
           <th>Técnica</th>
           <th>Obs</th>
-          <th>Descanso</th>
+          <th>Descanso</th>`;
+  }
+  html += `
         </tr>
       </thead>
       <tbody>
@@ -117,9 +136,13 @@ treinos.forEach((treino, i) => {
     const checked = progresso[key]?.feito ? "checked" : "";
     const doneClass = progresso[key]?.feito ? "done" : "";
 
-    html += `
-      <tr class="exercise-row ${doneClass}" data-key="${key}">
-        <td><input type="checkbox" ${checked}></td>
+    html += `<tr class="exercise-row ${doneClass}" data-key="${key}">`;
+    html += `<td><input type="checkbox" ${checked}></td>`;
+
+    if (treino.tipo === "dieta") {
+      html += `<td>${ex[0]}</td><td>${ex[1]}</td>`;
+    } else {
+      html += `
         <td>${ex[0]}</td>
         <td>${ex[1]}</td>
         <td>${ex[2]}</td>
@@ -129,8 +152,10 @@ treinos.forEach((treino, i) => {
           <button class="timer-btn" onclick="iniciarTimer(this)">⏱️</button>
           <span class="timer-display">00:00</span>
         </td>
-      </tr>
-    `;
+      `;
+    }
+
+    html += `</tr>`;
   });
 
   html += `</tbody></table>`;
