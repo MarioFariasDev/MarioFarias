@@ -59,18 +59,18 @@ const treinos = [
       ["HIIT", "10x200m", "-", "Pace 4:00", "Neuromuscular"],
       ["Longão", "1", "10km", "Pace 5:00", "Resistência mental"]
     ]
-  },
-  // Dieta
+  }, // Dieta
   {
     dia: "Dieta Econômica e Inteligente",
     tecnica: "Baixo custo",
     objetivo: "Manutenção de massa e energia",
+    tipo: "dieta",
     exercicios: [
-      ["Café da manhã", "-", "-", "-", "2 ovos + pão integral + banana + café"],
-      ["Almoço", "-", "-", "-", "Arroz + feijão + frango (ou ovo) + legumes"],
-      ["Lanche", "-", "-", "-", "Pasta de amendoim + banana + limão"],
-      ["Jantar", "-", "-", "-", "Ovos mexidos + salada + arroz integral"],
-      ["Ceia (opcional)", "-", "-", "-", "Mingau de aveia"]
+      ["Café da manhã", "2 ovos + pão integral + banana + café"],
+      ["Almoço", "Arroz + feijão + frango (ou ovo) + legumes"],
+      ["Lanche", "Pasta de amendoim + banana + limão"],
+      ["Jantar", "Ovos mexidos + salada + arroz integral"],
+      ["Ceia (opcional)", "Mingau de aveia"]
     ]
   },
   // Suplementação
@@ -79,10 +79,9 @@ const treinos = [
     tecnica: "Acessível",
     objetivo: "Recuperação e performance",
     exercicios: [
-      ["Whey Protein", "1 dose", "Pós-treino", "-", "Se possível"],
-      ["Alternativa", "-", "-", "-", "3 ovos ou leite com banana"],
-      ["Creatina", "3-5g/dia", "-", "-", "Altamente eficaz"],
-      ["Multivitamínico", "1 comp/dia", "-", "-", "Farmácia popular"]
+      ["Whey Protein", "Pós-treino"],
+      ["Creatina","3-5g/dia"],
+      ["Multivitamínico","1 comp/dia"]
     ]
   }
 ];
