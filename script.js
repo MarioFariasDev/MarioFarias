@@ -49,6 +49,7 @@ const treinos = [
         reps: "Falha",
         tecnica: "-",
         obs: "-",
+        video: "barra-fixa.mp4"
       },
       {
         nome: "Remada curvada",
@@ -56,6 +57,7 @@ const treinos = [
         reps: "10",
         tecnica: "Cadência 3:1",
         obs: "-",
+        video: "remada-curvada.mp4"
       },
       {
         nome: "Pulley frente + Rosca direta",
@@ -63,6 +65,7 @@ const treinos = [
         reps: "12",
         tecnica: "Bi-set",
         obs: "-",
+        video: "pulley-rosca.mp4"
       },
       {
         nome: "Rosca alternada unilateral",
@@ -70,51 +73,51 @@ const treinos = [
         reps: "10",
         tecnica: "Isometria",
         obs: "-",
+        video: "rosca-unilateral.mp4"
       }
     ]
   },
   // Treino C – Pernas
   {
-    {
-  dia: "Treino C – Pernas completas",
-  tecnica: "Pirâmide + Falha",
-  objetivo: "Desenvolvimento de força e volume",
-  tipo: "normal",
-  exercicios: [
-    {
-      nome: "Agachamento livre",
-      series: "5",
-      reps: "15-12-10-8-6",
-      tecnica: "Pirâmide",
-      obs: "-",
-      video: "agachamento-livre.mp4"
-    },
-    {
-      nome: "Leg press",
-      series: "4",
-      reps: "12",
-      tecnica: "-",
-      obs: "-",
-      video: "leg-press.mp4"
-    },
-    {
-      nome: "Afundo com halteres",
-      series: "3",
-      reps: "8 cada perna",
-      tecnica: "-",
-      obs: "-",
-      video: "afundo-halteres.mp4"
-    },
-    {
-      nome: "Cadeira extensora",
-      series: "3",
-      reps: "Falha",
-      tecnica: "Drop-set triplo",
-      obs: "-",
-      video: "cadeira-extensora.mp4"
-    }
-  ]
-}
+    dia: "Treino C – Pernas completas",
+    tecnica: "Pirâmide + Falha",
+    objetivo: "Desenvolvimento de força e volume",
+    tipo: "normal",
+    exercicios: [
+      {
+        nome: "Agachamento livre",
+        series: "5",
+        reps: "15-12-10-8-6",
+        tecnica: "Pirâmide",
+        obs: "-",
+        video: "agachamento-livre.mp4"
+      },
+      {
+        nome: "Leg press",
+        series: "4",
+        reps: "12",
+        tecnica: "-",
+        obs: "-",
+        video: "leg-press.mp4"
+      },
+      {
+        nome: "Afundo com halteres",
+        series: "3",
+        reps: "8 cada perna",
+        tecnica: "-",
+        obs: "-",
+        video: "afundo-halteres.mp4"
+      },
+      {
+        nome: "Cadeira extensora",
+        series: "3",
+        reps: "Falha",
+        tecnica: "Drop-set triplo",
+        obs: "-",
+        video: "cadeira-extensora.mp4"
+      }
+    ]
+  },
   // Treino D – Ombros + Trapézio
   {
     dia: "Treino D – Ombros + Trapézio",
