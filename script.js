@@ -75,41 +75,46 @@ const treinos = [
   },
   // Treino C – Pernas
   {
-    dia: "Treino C – Pernas completas",
-    tecnica: "Pirâmide + Falha",
-    objetivo: "Desenvolvimento de força e volume",
-    tipo: "normal",
-    exercicios: [
-      {
-        nome: "Agachamento livre",
-        series: "5",
-        reps: "15-12-10-8-6",
-        tecnica: "Pirâmide",
-        obs: "-",
-      },
-      {
-        nome: "Leg press",
-        series: "4",
-        reps: "12",
-        tecnica: "-",
-        obs: "-",
-      },
-      {
-        nome: "Afundo com halteres",
-        series: "3",
-        reps: "8 cada perna",
-        tecnica: "-",
-        obs: "-",
-      },
-      {
-        nome: "Cadeira extensora",
-        series: "3",
-        reps: "Falha",
-        tecnica: "Drop-set triplo",
-        obs: "-",
-      }
-    ]
-  },
+    {
+  dia: "Treino C – Pernas completas",
+  tecnica: "Pirâmide + Falha",
+  objetivo: "Desenvolvimento de força e volume",
+  tipo: "normal",
+  exercicios: [
+    {
+      nome: "Agachamento livre",
+      series: "5",
+      reps: "15-12-10-8-6",
+      tecnica: "Pirâmide",
+      obs: "-",
+      video: "agachamento-livre.mp4"
+    },
+    {
+      nome: "Leg press",
+      series: "4",
+      reps: "12",
+      tecnica: "-",
+      obs: "-",
+      video: "leg-press.mp4"
+    },
+    {
+      nome: "Afundo com halteres",
+      series: "3",
+      reps: "8 cada perna",
+      tecnica: "-",
+      obs: "-",
+      video: "afundo-halteres.mp4"
+    },
+    {
+      nome: "Cadeira extensora",
+      series: "3",
+      reps: "Falha",
+      tecnica: "Drop-set triplo",
+      obs: "-",
+      video: "cadeira-extensora.mp4"
+    }
+  ]
+}
   // Treino D – Ombros + Trapézio
   {
     dia: "Treino D – Ombros + Trapézio",
@@ -242,7 +247,7 @@ treinos.forEach((treino, i) => {
       const reps = ex.reps || ex[2] || "-";
       const tecnica = ex.tecnica || ex[3] || "-";
       const obs = ex.obs || ex[4] || "-";
-      const videoFile = nome.toLowerCase().split(" ")[0].replace("+", "").replace(/\W/g, "") + ".mp4";
+      const videoFile = ex.video || "sem-video.mp4";
 
       html += `
         <td>${nome}</td>
