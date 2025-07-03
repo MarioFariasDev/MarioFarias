@@ -309,19 +309,24 @@ function formatar(s) {
   return `${m}:${sec}`;
 }
 
-// Modal de vídeo
-const videoModal = document.createElement("div");
-videoModal.id = "videoModal";
-videoModal.innerHTML = `
-  <div class="video-content">
-    <span class="close-btn" onclick="fecharVideo()">✖</span>
-    <video id="videoPlayer" controls>
-      <source src="" type="video/mp4">
-      Seu navegador não suporta vídeo.
-    </video>
-  </div>
-`;
-document.body.appendChild(videoModal);
+// Modal de vídeo (criado após o DOM estar carregado)
+document.addEventListener("DOMContentLoaded", () => {
+  const videoModal = document.createElement("div");
+  videoModal.id = "videoModal";
+  videoModal.innerHTML = `
+    <div class="video-content">
+      <span class="close-btn" id="fecharBtn">✖</span>
+      <video id="videoPlayer" controls>
+        <source src="" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+  `;
+  document.body.appendChild(videoModal);
+
+  // Conecta o botão X ao fechamento
+  document.getElementById("fecharBtn").addEventListener("click", fecharVideo);
+});
 
 function abrirVideo(arquivo) {
   const videoPath = "videos/" + arquivo;
@@ -333,10 +338,14 @@ function abrirVideo(arquivo) {
 
 function fecharVideo() {
   const modal = document.getElementById("videoModal");
-  modal.style.display = "none";
   const player = document.getElementById("videoPlayer");
-  player.pause();
-  player.currentTime = 0;
+
+  if (player) {
+    player.pause();
+    player.currentTime = 0;
+  }
+
+  modal.style.display = "none";
 }
 
 // --- FEEDBACK ---
