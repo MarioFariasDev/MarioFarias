@@ -6,10 +6,34 @@ const treinos = [
     objetivo: "Hipertrofia e intensidade",
     tipo: "normal",
     exercicios: [
-      ["Supino reto + Crucifixo reto", "4", "12-10-8-6", "Drop-set", "Drop na última série"],
-      ["Supino inclinado + Cross-over", "3", "12", "Bi-set", "-"],
-      ["Mergulho entre bancos", "3", "Falha", "-", "-"],
-      ["Tríceps corda", "3", "15", "-", "-"]
+      {
+        nome: "Supino reto + Crucifixo reto",
+        series: "4",
+        reps: "12-10-8-6",
+        tecnica: "Drop-set",
+        obs: "Drop na última série",
+      },
+      {
+        nome: "Supino inclinado + Cross-over",
+        series: "3",
+        reps: "12",
+        tecnica: "Bi-set",
+        obs: "-",
+      },
+      {
+        nome: "Mergulho entre bancos",
+        series: "3",
+        reps: "Falha",
+        tecnica: "-",
+        obs: "-",
+      },
+      {
+        nome: "Tríceps corda",
+        series: "3",
+        reps: "15",
+        tecnica: "-",
+        obs: "-",
+      }
     ]
   },
   // Treino B – Costas + Bíceps
@@ -19,10 +43,34 @@ const treinos = [
     objetivo: "Força e controle neuromuscular",
     tipo: "normal",
     exercicios: [
-      ["Barra fixa", "4", "Falha", "-", "-"],
-      ["Remada curvada", "3", "10", "Cadência 3:1", "-"],
-      ["Pulley frente + Rosca direta", "3", "12", "Bi-set", "-"],
-      ["Rosca alternada unilateral", "3", "10", "Isometria", "-"]
+      {
+        nome: "Barra fixa",
+        series: "4",
+        reps: "Falha",
+        tecnica: "-",
+        obs: "-",
+      },
+      {
+        nome: "Remada curvada",
+        series: "3",
+        reps: "10",
+        tecnica: "Cadência 3:1",
+        obs: "-",
+      },
+      {
+        nome: "Pulley frente + Rosca direta",
+        series: "3",
+        reps: "12",
+        tecnica: "Bi-set",
+        obs: "-",
+      },
+      {
+        nome: "Rosca alternada unilateral",
+        series: "3",
+        reps: "10",
+        tecnica: "Isometria",
+        obs: "-",
+      }
     ]
   },
   // Treino C – Pernas
@@ -32,10 +80,34 @@ const treinos = [
     objetivo: "Desenvolvimento de força e volume",
     tipo: "normal",
     exercicios: [
-      ["Agachamento livre", "5", "15-12-10-8-6", "Pirâmide", "-"],
-      ["Leg press 45°", "4", "12", "-", "-"],
-      ["Afundo com halteres", "3", "8 cada perna", "-", "-"],
-      ["Cadeira extensora", "3", "Falha", "Drop-set triplo", "-"]
+      {
+        nome: "Agachamento livre",
+        series: "5",
+        reps: "15-12-10-8-6",
+        tecnica: "Pirâmide",
+        obs: "-",
+      },
+      {
+        nome: "Leg press",
+        series: "4",
+        reps: "12",
+        tecnica: "-",
+        obs: "-",
+      },
+      {
+        nome: "Afundo com halteres",
+        series: "3",
+        reps: "8 cada perna",
+        tecnica: "-",
+        obs: "-",
+      },
+      {
+        nome: "Cadeira extensora",
+        series: "3",
+        reps: "Falha",
+        tecnica: "Drop-set triplo",
+        obs: "-",
+      }
     ]
   },
   // Treino D – Ombros + Trapézio
@@ -45,13 +117,37 @@ const treinos = [
     objetivo: "Definição e hipertrofia",
     tipo: "normal",
     exercicios: [
-      ["Elevação lateral", "3", "21 reps (7+7+7)", "Técnica 21", "-"],
-      ["Desenvolvimento com halteres", "3", "10", "Drop-set na última", "-"],
-      ["Encolhimento com barra", "4", "12", "-", "-"],
-      ["Face pull", "3", "15", "-", "-"]
+      {
+        nome: "Elevação lateral",
+        series: "3",
+        reps: "21 reps (7+7+7)",
+        tecnica: "Técnica 21",
+        obs: "-",
+      },
+      {
+        nome: "Desenvolvimento com halteres",
+        series: "3",
+        reps: "10",
+        tecnica: "Drop-set na última",
+        obs: "-",
+      },
+      {
+        nome: "Encolhimento com barra",
+        series: "4",
+        reps: "12",
+        tecnica: "-",
+        obs: "-",
+      },
+      {
+        nome: "Face pull",
+        series: "3",
+        reps: "15",
+        tecnica: "-",
+        obs: "-",
+      }
     ]
   },
-  // Corrida – Foco Híbrido
+  // Corrida
   {
     dia: "Treinos de Corrida – Híbrido",
     tecnica: "Variedade de estímulos",
@@ -94,6 +190,8 @@ const treinos = [
   }
 ];
 
+// --- RENDERIZAÇÃO DOS TREINOS ---
+
 const treinoContainer = document.getElementById("treinoContainer");
 const progresso = JSON.parse(localStorage.getItem("progresso") || "{}");
 
@@ -109,7 +207,6 @@ treinos.forEach((treino, i) => {
       <thead>
         <tr>`;
 
-  // Cabeçalho condicional
   if (treino.tipo === "dieta") {
     html += `
           <th>✔</th>
@@ -123,13 +220,11 @@ treinos.forEach((treino, i) => {
           <th>Reps</th>
           <th>Técnica</th>
           <th>Obs</th>
-          <th>Descanso</th>`;
+          <th>Descanso</th>
+          <th>Vídeo</th>`;
   }
-  html += `
-        </tr>
-      </thead>
-      <tbody>
-  `;
+
+  html += `</tr></thead><tbody>`;
 
   treino.exercicios.forEach((ex, j) => {
     const key = `d${i}_e${j}`;
@@ -142,17 +237,24 @@ treinos.forEach((treino, i) => {
     if (treino.tipo === "dieta") {
       html += `<td>${ex[0]}</td><td>${ex[1]}</td>`;
     } else {
+      const nome = ex.nome || ex[0];
+      const series = ex.series || ex[1] || "-";
+      const reps = ex.reps || ex[2] || "-";
+      const tecnica = ex.tecnica || ex[3] || "-";
+      const obs = ex.obs || ex[4] || "-";
+      const videoFile = nome.toLowerCase().split(" ")[0].replace("+", "").replace(/\W/g, "") + ".mp4";
+
       html += `
-        <td>${ex[0]}</td>
-        <td>${ex[1]}</td>
-        <td>${ex[2]}</td>
-        <td>${ex[3]}</td>
-        <td>${ex[4]}</td>
+        <td>${nome}</td>
+        <td>${series}</td>
+        <td>${reps}</td>
+        <td>${tecnica}</td>
+        <td>${obs}</td>
         <td>
           <button class="timer-btn" onclick="iniciarTimer(this)">⏱️</button>
           <span class="timer-display">00:00</span>
         </td>
-      `;
+        <td><button class="timer-btn" onclick="abrirVideo('${videoFile}')">🎥</button></td>`;
     }
 
     html += `</tr>`;
@@ -163,7 +265,7 @@ treinos.forEach((treino, i) => {
   treinoContainer.appendChild(card);
 });
 
-// Checkbox progresso
+// --- CHECKBOX PROGRESSO ---
 document.querySelectorAll(".exercise-row input[type='checkbox']").forEach(input => {
   input.addEventListener("change", function () {
     const row = this.closest(".exercise-row");
@@ -175,7 +277,7 @@ document.querySelectorAll(".exercise-row input[type='checkbox']").forEach(input 
   });
 });
 
-// Timer por exercício
+// --- TIMER POR EXERCÍCIO ---
 function iniciarTimer(btn) {
   const span = btn.nextElementSibling;
   let tempo = 60;
@@ -199,7 +301,37 @@ function formatar(s) {
   return `${m}:${sec}`;
 }
 
-// Feedback
+// Modal de vídeo
+const videoModal = document.createElement("div");
+videoModal.id = "videoModal";
+videoModal.innerHTML = `
+  <div class="video-content">
+    <span class="close-btn" onclick="fecharVideo()">✖</span>
+    <video id="videoPlayer" controls>
+      <source src="" type="video/mp4">
+      Seu navegador não suporta vídeo.
+    </video>
+  </div>
+`;
+document.body.appendChild(videoModal);
+
+function abrirVideo(arquivo) {
+  const videoPath = "videos/" + arquivo;
+  const player = document.getElementById("videoPlayer");
+  player.src = videoPath;
+  document.getElementById("videoModal").style.display = "flex";
+  player.play();
+}
+
+function fecharVideo() {
+  const modal = document.getElementById("videoModal");
+  modal.style.display = "none";
+  const player = document.getElementById("videoPlayer");
+  player.pause();
+  player.currentTime = 0;
+}
+
+// --- FEEDBACK ---
 const feedback = document.getElementById("feedback");
 const feedbackSalvo = localStorage.getItem("feedbackGlobal");
 if (feedbackSalvo) feedback.value = feedbackSalvo;
