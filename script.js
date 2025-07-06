@@ -2,156 +2,264 @@ const treinos = [
   // Treino A – Peito + Tríceps
   {
     dia: "Treino A – Peito + Tríceps",
-    tecnica: "Bi-Set e Drop-set",
-    objetivo: "Hipertrofia e intensidade",
+    tecnica: "Pré-exaustão + Rest-pause",
+    objetivo: "Quebrar platô e estimular fibras profundas",
     tipo: "normal",
     exercicios: [
       {
-        nome: "Supino reto + Crucifixo reto",
-        series: "4",
-        reps: "12-10-8-6",
-        tecnica: "Drop-set",
-        obs: "Drop na última série",
-      },
-      {
-        nome: "Supino inclinado + Cross-over",
+        nome: "Crucifixo reto (pré-exaustão)",
         series: "3",
-        reps: "12",
-        tecnica: "Bi-set",
-        obs: "-",
+        reps: "15",
+        tecnica: "-",
+        obs: "-"
       },
       {
-        nome: "Mergulho entre bancos",
+        nome: "Supino reto",
+        series: "4",
+        reps: "8",
+        tecnica: "Rest-pause",
+        obs: "8 + 4 + 2 na última"
+      },
+      {
+        nome: "Supino inclinado",
+        series: "3",
+        reps: "10",
+        tecnica: "-",
+        obs: "-"
+      },
+      {
+        nome: "Paralelas",
         series: "3",
         reps: "Falha",
         tecnica: "-",
-        obs: "-",
+        obs: "-"
       },
       {
         nome: "Tríceps corda",
         series: "3",
-        reps: "15",
+        reps: "12",
         tecnica: "-",
-        obs: "-",
+        obs: "-"
+      },
+      {
+        nome: "Tríceps francês unilateral",
+        series: "3",
+        reps: "12",
+        tecnica: "-",
+        obs: "-"
       }
     ]
   },
   // Treino B – Costas + Bíceps
   {
     dia: "Treino B – Costas + Bíceps",
-    tecnica: "Rest-pause e Técnica Lenta",
-    objetivo: "Força e controle neuromuscular",
+    tecnica: "Drop-set duplo + Bi-set",
+    objetivo: "Hipertrofia com volume e intensidade",
     tipo: "normal",
     exercicios: [
       {
-        nome: "Barra fixa",
-        series: "4",
-        reps: "Falha",
-        tecnica: "-",
-        obs: "-",
-        video: "barra-fixa.mp4"
-      },
-      {
-        nome: "Remada curvada",
-        series: "3",
-        reps: "10",
-        tecnica: "Cadência 3:1",
-        obs: "-",
-        video: "remada-curvada.mp4"
-      },
-      {
-        nome: "Pulley frente + Rosca direta",
+        nome: "Pull-down frente",
         series: "3",
         reps: "12",
-        tecnica: "Bi-set",
-        obs: "-",
-        video: "pulley-rosca.mp4"
+        tecnica: "Drop-set duplo",
+        obs: "12 + 10 + 8"
       },
       {
-        nome: "Rosca alternada unilateral",
+        nome: "Remada unilateral",
         series: "3",
-        reps: "10",
-        tecnica: "Isometria",
-        obs: "-",
-        video: "rosca-unilateral.mp4"
+        reps: "10 cada lado",
+        tecnica: "-",
+        obs: "-"
+      },
+      {
+        nome: "Remada baixa + Rosca direta",
+        series: "3",
+        reps: "10 cada",
+        tecnica: "Bi-set",
+        obs: "-"
+      },
+      {
+        nome: "Rosca martelo",
+        series: "3",
+        reps: "12",
+        tecnica: "-",
+        obs: "-"
+      },
+      {
+        nome: "Rosca concentrada com isometria",
+        series: "2",
+        reps: "8",
+        tecnica: "Isometria 5s no topo",
+        obs: "-"
       }
     ]
   },
   // Treino C – Pernas
   {
-    dia: "Treino C – Pernas completas",
-    tecnica: "Pirâmide + Falha",
-    objetivo: "Desenvolvimento de força e volume",
+    dia: "Treino C – Pernas",
+    tecnica: "Isometria + cadência lenta",
+    objetivo: "Recrutamento máximo e controle",
     tipo: "normal",
     exercicios: [
       {
         nome: "Agachamento livre",
-        series: "5",
-        reps: "15-12-10-8-6",
-        tecnica: "Pirâmide",
-        obs: "-",
-        video: "agachamento-livre.mp4"
+        series: "4",
+        reps: "10",
+        tecnica: "Descida em 4s",
+        obs: "-"
+      },
+      {
+        nome: "Cadeira extensora",
+        series: "3",
+        reps: "15",
+        tecnica: "Isometria 3s no topo",
+        obs: "-"
       },
       {
         nome: "Leg press",
         series: "4",
         reps: "12",
-        tecnica: "-",
-        obs: "-",
-        video: "leg-press.mp4"
+        tecnica: "Cadência 3:0:1",
+        obs: "-"
       },
       {
-        nome: "Afundo com halteres",
+        nome: "Stiff",
         series: "3",
-        reps: "8 cada perna",
-        tecnica: "-",
-        obs: "-",
-        video: "afundo-halteres.mp4"
+        reps: "10",
+        tecnica: "Ênfase em posterior",
+        obs: "-"
       },
       {
-        nome: "Cadeira extensora",
-        series: "3",
-        reps: "Falha",
-        tecnica: "Drop-set triplo",
-        obs: "-",
-        video: "cadeira-extensora.mp4"
+        nome: "Gêmeos em pé",
+        series: "4",
+        reps: "20",
+        tecnica: "-",
+        obs: "-"
       }
     ]
   },
-  // Treino D – Ombros + Trapézio
+  // Treino D – Core + Mobilidade
   {
-    dia: "Treino D – Ombros + Trapézio",
-    tecnica: "Técnica 21 + Drop-set",
-    objetivo: "Definição e hipertrofia",
+    dia: "Treino D – Core + Mobilidade",
+    tecnica: "Circuito 3x",
+    objetivo: "Fortalecimento do core e amplitude articular",
+    tipo: "normal",
+    exercicios: [
+      {
+        nome: "Prancha",
+        series: "3",
+        reps: "1min",
+        tecnica: "-",
+        obs: "-"
+      },
+      {
+        nome: "Elevação de pernas",
+        series: "3",
+        reps: "15",
+        tecnica: "-",
+        obs: "-"
+      },
+      {
+        nome: "Abdominal canivete",
+        series: "3",
+        reps: "15",
+        tecnica: "-",
+        obs: "-"
+      },
+      {
+        nome: "Abdominal infra no banco",
+        series: "3",
+        reps: "20",
+        tecnica: "-",
+        obs: "-"
+      },
+      {
+        nome: "Alongamento dinâmico + mobilidade",
+        series: "-",
+        reps: "-",
+        tecnica: "-",
+        obs: "Foco em quadril e tornozelos"
+      }
+    ]
+  },
+  // Treino E – Ombros + Trapézio
+  {
+    dia: "Treino E – Ombros + Trapézio",
+    tecnica: "Time under tension + Técnica 21",
+    objetivo: "Controle e tensão contínua",
     tipo: "normal",
     exercicios: [
       {
         nome: "Elevação lateral",
         series: "3",
-        reps: "21 reps (7+7+7)",
+        reps: "12",
+        tecnica: "Cadência 3s subida/3s descida",
+        obs: "-"
+      },
+      {
+        nome: "Desenvolvimento militar",
+        series: "4",
+        reps: "10",
+        tecnica: "-",
+        obs: "-"
+      },
+      {
+        nome: "Elevação frontal",
+        series: "-",
+        reps: "21 reps",
         tecnica: "Técnica 21",
-        obs: "-",
+        obs: "-"
+      },
+      {
+        nome: "Encolhimento com halteres",
+        series: "4",
+        reps: "15",
+        tecnica: "-",
+        obs: "-"
+      },
+      {
+        nome: "Crucifixo inverso (posterior)",
+        series: "3",
+        reps: "12",
+        tecnica: "-",
+        obs: "-"
+      }
+    ]
+  },
+  // Treino F (Opcional) – Full Body com Giant Set
+  {
+    dia: "Treino F (Opcional) – Full Body com Giant Set",
+    tecnica: "Giant Set (3x)",
+    objetivo: "Teste de resistência para atletas bem recuperados",
+    tipo: "normal",
+    exercicios: [
+      {
+        nome: "Agachamento livre",
+        series: "3",
+        reps: "10",
+        tecnica: "Sem descanso",
+        obs: "-"
+      },
+      {
+        nome: "Supino reto",
+        series: "3",
+        reps: "10",
+        tecnica: "Sem descanso",
+        obs: "-"
+      },
+      {
+        nome: "Remada curvada",
+        series: "3",
+        reps: "10",
+        tecnica: "Sem descanso",
+        obs: "-"
       },
       {
         nome: "Desenvolvimento com halteres",
         series: "3",
         reps: "10",
-        tecnica: "Drop-set na última",
-        obs: "-",
-      },
-      {
-        nome: "Encolhimento com barra",
-        series: "4",
-        reps: "12",
-        tecnica: "-",
-        obs: "-",
-      },
-      {
-        nome: "Face pull",
-        series: "3",
-        reps: "15",
-        tecnica: "-",
-        obs: "-",
+        tecnica: "Sem descanso",
+        obs: "-"
       }
     ]
   },
