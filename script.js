@@ -1,134 +1,118 @@
 const treinos = [
-  // DIA 1 – Peito + Tríceps
+  // ===================== SEMANA 1 =====================
+  {
+    dia: "DIA 3 – Pernas",
+    tecnica: "Pré-exaustão + Pirâmide + Drop-set",
+    objetivo: "Choque inicial para quadríceps e posterior",
+    tipo: "normal",
+    exercicios: [
+      { nome: "Cadeira extensora (Pré-exaustão)", series: "4x20", obs: "Isolamento antes dos compostos" },
+      { nome: "Agachamento livre (Pirâmide)", series: "5x12-10-8-6-6", obs: "Aumenta carga progressivamente" },
+      { nome: "Leg Press 45°", series: "4x12 + drop na última", obs: "Falha controlada" },
+      { nome: "Stiff", series: "4x10", obs: "Desce lento para alongar posterior" },
+      { nome: "Afundo no Smith", series: "3x12 cada perna", obs: "Passos longos e firmes" },
+      { nome: "Gêmeos sentado", series: "4x20", obs: "Segura 2s no topo" },
+    ],
+  },
+  {
+    dia: "DIA 4 – Ombros + Trapézio + Core",
+    tecnica: "Bi-set + Old School",
+    objetivo: "Volume e densidade em deltoides e trapézio",
+    tipo: "normal",
+    exercicios: [
+      { nome: "Elevação lateral + Elevação frontal (Bi-set)", series: "4x12 cada", obs: "Sem descanso entre exercícios" },
+      { nome: "Desenvolvimento militar barra", series: "4x8", obs: "Estilo old school pesado" },
+      { nome: "Crucifixo inverso", series: "4x12", obs: "Deltoide posterior isolado" },
+      { nome: "Encolhimento com barra", series: "4x15", obs: "Segura 2s no topo" },
+      { nome: "Prancha isométrica", series: "3x1min", obs: "Core firme e alinhado" },
+      { nome: "Abdominal canivete", series: "3x15", obs: "Amplitude total" },
+    ],
+  },
+  {
+    dia: "DIA 5 – Full Body Intensivo",
+    tecnica: "Old School Volume",
+    objetivo: "Base de força e resistência geral",
+    tipo: "normal",
+    exercicios: [
+      { nome: "Supino reto", series: "4x10", obs: "Foco na execução perfeita" },
+      { nome: "Remada curvada", series: "4x10", obs: "Explosão na subida" },
+      { nome: "Agachamento livre", series: "4x12", obs: "Controle na descida" },
+      { nome: "Desenvolvimento halteres", series: "4x12", obs: "Amplitude máxima" },
+      { nome: "Barra fixa", series: "3xFalha", obs: "Peso corporal ou com carga" },
+      { nome: "Abdominal infra", series: "3x20", obs: "Controle e respiração" },
+    ],
+  },
+  {
+    dia: "DIA 6 – Foco Ponto Fraco (Costas)",
+    tecnica: "Rest-pause + Drop-set",
+    objetivo: "Zerar máquinas e ganhar densidade dorsal",
+    tipo: "normal",
+    exercicios: [
+      { nome: "Puxada aberta", series: "4x8 + rest-pause", obs: "Última série: 8 + 5 + 3" },
+      { nome: "Remada baixa", series: "4x10 + drop final", obs: "Reduz 50% carga e continua" },
+      { nome: "Barra fixa com carga", series: "3xFalha", obs: "Adicione anilha se possível" },
+      { nome: "Pullover máquina", series: "3x12", obs: "Alongamento e contração máxima" },
+    ],
+  },
+
+  // ===================== SEMANA 2 =====================
   {
     dia: "DIA 1 – Peito + Tríceps",
-    tecnica: "Supersérie com pausa curta",
-    objetivo: "Alta congestão e estímulo metabólico",
+    tecnica: "Cluster Set + Old School",
+    objetivo: "Força máxima e densidade",
     tipo: "normal",
     exercicios: [
-      { nome: "Supino reto + Crucifixo reto", series: "4x12", obs: "Supersérie com 30s de pausa" },
-      { nome: "Supino inclinado + Cross-over", series: "3x10", obs: "Supersérie com foco em parte superior" },
-      { nome: "Paralelas", series: "3xFalha", obs: "Use peso corporal ou carga adicional" },
-      { nome: "Tríceps testa + Coice", series: "3x12", obs: "Supersérie de exaustão" },
-      { nome: "Mergulho entre bancos", series: "3x15", obs: "Finalizador com volume" },
+      { nome: "Supino reto (Cluster Set)", series: "5x6-6-6-4-4", obs: "20s pausa interna nas últimas" },
+      { nome: "Supino inclinado halteres", series: "4x8", obs: "Desce lento, sobe explosivo" },
+      { nome: "Crucifixo reto", series: "3x12", obs: "Isolamento de peitoral" },
+      { nome: "Tríceps testa barra", series: "4x8", obs: "Old school pesado" },
+      { nome: "Paralelas", series: "3xFalha", obs: "Peso corporal ou cinto" },
+      { nome: "Coice halteres", series: "3x12", obs: "Movimento controlado" },
     ],
   },
-
-  // DIA 2 – Costas + Bíceps
   {
     dia: "DIA 2 – Costas + Bíceps",
-    tecnica: "5-10-20 + Bi-set + pico de contração",
-    objetivo: "Força, pump e estímulo completo",
+    tecnica: "Rest-pause + Bi-set",
+    objetivo: "Força, densidade e pump",
     tipo: "normal",
     exercicios: [
-      { nome: "Puxada frente", series: "3x(5-10-20)", obs: "Muda carga durante a mesma série" },
-      { nome: "Remada curvada", series: "4x10", obs: "Foco em força e contração total" },
-      { nome: "Remada baixa + Rosca direta", series: "3x12", obs: "Bi-set intenso" },
-      { nome: "Rosca martelo com pico de contração", series: "3x10", obs: "Segure 2s no topo" },
-      { nome: "Rosca concentrada unilateral", series: "2xFalha", obs: "Isolamento final" },
+      { nome: "Puxada aberta", series: "4x6 + rest-pause", obs: "Última série com pausa 10s e continua" },
+      { nome: "Remada curvada barra", series: "4x8", obs: "Controle e explosão" },
+      { nome: "Remada unilateral halteres", series: "4x10", obs: "Segura 1s no topo" },
+      { nome: "Rosca direta barra", series: "4x8", obs: "Carga progressiva" },
+      { nome: "Rosca alternada supinada", series: "3x12", obs: "Estímulo completo de bíceps" },
+      { nome: "Rosca martelo concentrada", series: "3x10", obs: "Foco em braquial e antebraço" },
+    ],
+  },
+  {
+    dia: "DIA 3 – Pernas",
+    tecnica: "Progressão de carga + Old School",
+    objetivo: "Força e espessura de pernas",
+    tipo: "normal",
+    exercicios: [
+      { nome: "Agachamento livre", series: "5x8", obs: "Progressão de carga em cada série" },
+      { nome: "Leg press 45°", series: "4x10", obs: "Pausa de 1s na descida" },
+      { nome: "Stiff halteres", series: "4x8", obs: "Enfase em posterior" },
+      { nome: "Afundo barra", series: "3x8 cada perna", obs: "Controle de core" },
+      { nome: "Panturrilha em pé", series: "5x20", obs: "Segura no topo 2s" },
     ],
   },
 
-  // DIA 3 – Pernas
+  // ===================== SEMANA 3 =====================
   {
-    dia: "DIA 3 – Pernas completas",
-    tecnica: "Drop-set + excêntrica lenta",
-    objetivo: "Estresse muscular controlado e intensidade",
+    dia: "DIA 5 – Full Body Old School Final",
+    tecnica: "Bi-set + Intensidade Máxima",
+    objetivo: "Choque final para todo o corpo",
     tipo: "normal",
     exercicios: [
-      { nome: "Agachamento livre", series: "3x8", obs: "Descida em 4s" },
-      { nome: "Leg Press", series: "3x10 + Drop", obs: "Reduz 50% da carga na sequência" },
-      { nome: "Cadeira extensora", series: "3x12", obs: "Isometria de 3s no topo" },
-      { nome: "Stiff com halteres", series: "3x10", obs: "Enfase em posterior" },
-      { nome: "Gêmeos unilateral", series: "4x20", obs: "Amplitude total e foco na contração" },
+      { nome: "Supino reto + Barra fixa (Bi-set)", series: "4x8 cada", obs: "Sem descanso entre exercícios" },
+      { nome: "Agachamento + Desenvolvimento halteres (Bi-set)", series: "4x8 cada", obs: "Explosivo e técnico" },
+      { nome: "Levantamento terra", series: "4x6", obs: "Old School pesado, controle total" },
+      { nome: "Crucifixo inverso + Rosca direta (Bi-set)", series: "3x12 cada", obs: "Pump total" },
+      { nome: "Encolhimento halteres", series: "4x15", obs: "Segura 2s no topo" },
+      { nome: "Prancha com carga", series: "3x1min", obs: "Core finalizador" },
     ],
   },
-
-  // DIA 4 – Core + Mobilidade
-  {
-    dia: "DIA 4 – Core + Mobilidade",
-    tecnica: "Circuito funcional + isometria",
-    objetivo: "Estabilidade e ativação do core",
-    tipo: "normal",
-    exercicios: [
-      { nome: "Prancha frontal", series: "3x1min", obs: "Ativação total de core e lombar" },
-      { nome: "Abdominal bicicleta", series: "3x20", obs: "Controle do movimento" },
-      { nome: "Abdominal canivete", series: "3x15", obs: "Amplitude total" },
-      { nome: "Abdominal infra", series: "3x20", obs: "Sem balançar o quadril" },
-      { nome: "Alongamento geral", series: "10min", obs: "Mobilidade de quadril, ombros e tornozelos" },
-    ],
-  },
-
-  // DIA 5 – Ombros + Trapézio
-  {
-    dia: "DIA 5 – Ombros + Trapézio",
-    tecnica: "Pré-exaustão + Time under tension",
-    objetivo: "Volume total e detalhamento dos deltoides",
-    tipo: "normal",
-    exercicios: [
-      { nome: "Elevação lateral", series: "4x15", obs: "Cadência 3:1 (subida e descida lenta)" },
-      { nome: "Desenvolvimento com barra", series: "4x8", obs: "Carga controlada" },
-      { nome: "Elevação frontal com halteres", series: "3x10", obs: "Foco na porção anterior" },
-      { nome: "Face pull", series: "3x12", obs: "Isolamento do deltoide posterior" },
-      { nome: "Encolhimento com barra", series: "4x20", obs: "Trapézio com contração máxima" },
-    ],
-  },
-
-  // DIA 6 – Full Body (opcional)
-  {
-    dia: "DIA 6 – Full Body Potente",
-    tecnica: "Complexo + pliometria",
-    objetivo: "Explosão, resistência e finalização",
-    tipo: "normal",
-    exercicios: [
-      { nome: "Complexo com barra (agachamento + supino + remada + desenvolvimento)", series: "3 rounds", obs: "5 reps de cada exercício sem descanso" },
-      { nome: "Saltos no step", series: "3x10", obs: "Explosão" },
-      { nome: "Burpees com salto", series: "3x10", obs: "Alta intensidade" },
-      { nome: "Remada curvada", series: "3x12", obs: "Volume para costas" },
-      { nome: "Prancha", series: "3x1min", obs: "Estabilização final" },
-    ],
-  },
-  // Corrida
-  {
-    dia: "Treinos de Corrida – Híbrido",
-    tecnica: "Variedade de estímulos",
-    objetivo: "Resistência e VO2máx",
-    tipo: "normal",
-    exercicios: [
-      ["Corrida leve", "1", "30min", "Pace 5:30", "Base aeróbica"],
-      ["Intervalado", "5x800m", "Rec 2min", "Pace 4:10", "VO2máx"],
-      ["Corrida moderada", "1", "40min", "Pace 4:40", "Ritmo sustentado"],
-      ["HIIT", "10x200m", "-", "Pace 4:00", "Neuromuscular"],
-      ["Longão", "1", "10km", "Pace 5:00", "Resistência mental"]
-    ]
-  },
-  // Dieta
-  {
-    dia: "Dieta Econômica e Inteligente",
-    tecnica: "Baixo custo",
-    objetivo: "Manutenção de massa e energia",
-    tipo: "dieta",
-    exercicios: [
-      ["Café da manhã", "2 ovos + pão integral + banana + café"],
-      ["Almoço", "Arroz + feijão + frango (ou ovo) + legumes"],
-      ["Lanche", "Pasta de amendoim + banana + limão"],
-      ["Jantar", "Ovos mexidos + salada + arroz integral"],
-      ["Ceia (opcional)", "Mingau de aveia"]
-    ]
-  },
-  // Suplementação
-  {
-    dia: "Suplementação Inteligente",
-    tecnica: "Acessível",
-    objetivo: "Recuperação e performance",
-    tipo: "normal",
-    exercicios: [
-      ["Whey Protein", "1 dose", "Pós-treino", "-", "Se possível"],
-      ["Alternativa", "-", "-", "-", "3 ovos ou leite com banana"],
-      ["Creatina", "3-5g/dia", "-", "-", "Altamente eficaz"],
-      ["Multivitamínico", "1 comp/dia", "-", "-", "Farmácia popular"]
-    ]
-  }
 ];
 
 // --- RENDERIZAÇÃO DOS TREINOS ---
