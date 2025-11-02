@@ -1,84 +1,89 @@
 const treinos = [
-  // ===================== SEMANA 1 – DUATHLON BASE =====================
+  // ===================== SEMANA 0 – ATIVAÇÃO DUATHLON ELITE =====================
+
   {
-    dia: "DIA 1 – Rodagem leve + Técnica de Corrida",
-    tecnica: "Base Aeróbica + Drills",
-    objetivo: "Desenvolver resistência e economia de movimento",
-    tipo: "corrida",
+    dia: "DIA 1 – Teste de Limiar + Bike Girada",
+    tecnica: "Tempo Run + Cadência Alta",
+    objetivo: "Determinar limiar e preparar o corpo para treinos intensos",
+    tipo: "teste",
     exercicios: [
-      { nome: "Aquecimento", series: "10 min", obs: "Mobilidade e trote leve" },
-      { nome: "Corrida leve (Z2)", series: "30 min", obs: "Ritmo confortável e respiração nasal" },
-      { nome: "Drills técnicos", series: "3x20m", obs: "Skipping alto, passadas curtas, elevação de joelhos" },
+      { nome: "Aquecimento corrida", series: "10 min", obs: "Trote leve + mobilidade" },
+      { nome: "Tempo Run (Limiar)", series: "20 min", obs: "Máximo sustentável; anotar ritmo e FC" },
+      { nome: "Bike girada leve", series: "45 min", obs: "Cadência 90–95 rpm; soltar as pernas" },
     ],
   },
+
   {
-    dia: "DIA 2 – Funcional de Força (Jiu-Jitsu + Corrida)",
-    tecnica: "Circuito Funcional",
-    objetivo: "Fortalecer core, quadril e estabilidade para performance",
-    tipo: "funcional",
-    exercicios: [
-      { nome: "Agachamento com salto", series: "4x15", obs: "Explosivo" },
-      { nome: "Ponte de quadril unilateral", series: "4x12/lado", obs: "Ativa glúteo e posterior" },
-      { nome: "Flexão com joelho alternado", series: "4x15", obs: "Controle total do tronco" },
-      { nome: "Avanço alternado", series: "4x20", obs: "Passada longa e estável" },
-      { nome: "Prancha com toque no ombro", series: "4x30seg", obs: "Core firme" },
-      { nome: "Hollow hold", series: "4x30seg", obs: "Isometria abdominal" },
-    ],
-  },
-  {
-    dia: "DIA 3 – Corrida de Tiros Curtos",
-    tecnica: "Intervalado Curto (8x400m)",
-    objetivo: "Aumentar velocidade e resistência anaeróbica",
+    dia: "DIA 2 – Tiros VO2 (12x400m)",
+    tecnica: "Intervalado Curto Alta Intensidade",
+    objetivo: "Aumentar VO2, velocidade e capacidade anaeróbica",
     tipo: "corrida",
     exercicios: [
-      { nome: "Aquecimento", series: "10 min", obs: "Corrida leve e mobilidade" },
-      { nome: "Tiros de 400m", series: "8x", obs: "Ritmo forte (Z4–Z5), 1’30 trote leve entre" },
+      { nome: "Aquecimento", series: "15 min", obs: "Trote + mobilidade" },
+      { nome: "Tiros de 400m", series: "12x", obs: "Ritmo 3K; 1’30 trote leve entre" },
       { nome: "Desaquecimento", series: "10 min", obs: "Trote leve e alongamento" },
     ],
   },
+
   {
-    dia: "DIA 4 – Mobilidade e Recuperação Ativa",
-    tecnica: "Alongamento + Controle Respiratório",
-    objetivo: "Soltar quadris, tornozelos e lombar",
-    tipo: "recuperacao",
+    dia: "DIA 3 – Longão de Bike (Torque + Giro)",
+    tecnica: "Resistência + Cadência",
+    objetivo: "Criar base forte para treinos longos e ritmo de prova",
+    tipo: "bike",
     exercicios: [
-      { nome: "Caminhada leve", series: "30–40 min", obs: "Respiração profunda e postura ereta" },
-      { nome: "Alongamentos dinâmicos", series: "10 min", obs: "Foco em quadril e posterior" },
+      { nome: "Aquecimento", series: "15 min", obs: "Cadência crescente até 95 rpm" },
+      { nome: "Bloco principal", series: "90 min", obs: "20 min Z2 + 5x(5 min Z3 + 3 min Z2)" },
+      { nome: "Desaquecimento", series: "10 min", obs: "Giro leve 85–90 rpm" },
     ],
   },
+
   {
-    dia: "DIA 5 – Corrida Fartlek",
-    tecnica: "Alternância de Ritmos",
-    objetivo: "Melhorar ritmo e percepção de esforço",
+    dia: "DIA 4 – BRICK Agressivo (Bike + Corrida)",
+    tecnica: "Transição Real",
+    objetivo: "Treinar pernas pesadas e correr após carga alta",
+    tipo: "brick",
+    exercicios: [
+      { nome: "Bike contínua", series: "50 min", obs: "Z3 ritmado, intensidade forte e constante" },
+      { nome: "Transição (T2)", series: "2 min", obs: "Cronometrada; velocidade total" },
+      { nome: "Corrida pós-bike", series: "20 min", obs: "Ritmo de 5K; cadência alta" },
+    ],
+  },
+
+  {
+    dia: "DIA 5 – Fartlek Elite",
+    tecnica: "Alternância Violenta de Ritmos",
+    objetivo: "Desenvolver aceleração e resistência sob variação",
     tipo: "corrida",
     exercicios: [
       { nome: "Aquecimento", series: "10 min", obs: "Trote leve" },
-      { nome: "Blocos de Fartlek", series: "5x (2’ forte + 3’ leve)", obs: "Ritmo variável Z2–Z4" },
-      { nome: "Desaquecimento", series: "10 min", obs: "Trote leve + mobilidade" },
+      { nome: "Fartlek", series: "10x (1 min forte + 1 min leve)", obs: "Z4 nos fortes; z2 nos leves" },
+      { nome: "Bloco moderado final", series: "15 min", obs: "Z3 estável" },
+      { nome: "Desaquecimento", series: "10 min", obs: "Trocar respiração e postura" },
     ],
   },
+
   {
-    dia: "DIA 6 – Funcional Explosivo",
-    tecnica: "Potência + Resistência Muscular",
-    objetivo: "Gerar força rápida e resistência para transições",
-    tipo: "funcional",
+    dia: "DIA 6 – Bike de Subida (Força Bruta)",
+    tecnica: "Hill Repeats",
+    objetivo: "Aumentar força específica para ciclismo competitivo",
+    tipo: "bike",
     exercicios: [
-      { nome: "Saltos no step", series: "4x10", obs: "Explosão vertical" },
-      { nome: "Kettlebell swing (ou mochila)", series: "4x15", obs: "Potência de quadril" },
-      { nome: "Agachamento isométrico", series: "4x30seg", obs: "Mantém tensão constante" },
-      { nome: "Prancha lateral", series: "4x30seg/lado", obs: "Estabilização de tronco" },
-      { nome: "Burpee técnico", series: "4x10", obs: "Execução controlada" },
+      { nome: "Aquecimento", series: "20 min", obs: "Z2 constante" },
+      { nome: "Subidas", series: "8x2 min", obs: "75 rpm sentado; torque máximo; recuperação 1:30" },
+      { nome: "Desaquecimento", series: "20 min", obs: "Soltando com cadência leve" },
     ],
   },
+
   {
-    dia: "DIA 7 – Longão",
-    tecnica: "Endurance Sustentado",
-    objetivo: "Aumentar tempo em pé e controle respiratório",
+    dia: "DIA 7 – Longão Progressivo",
+    tecnica: "Endurance + Crescimento de Ritmo",
+    objetivo: "Trabalhar aparato cardiovascular e controle de esforço",
     tipo: "corrida",
     exercicios: [
-      { nome: "Aquecimento", series: "10 min", obs: "Trote leve e mobilidade" },
-      { nome: "Corrida contínua leve (Z2)", series: "55–65 min", obs: "Ritmo constante, foco na respiração" },
-      { nome: "Desaquecimento", series: "5 min", obs: "Caminhada + alongamento leve" },
+      { nome: "Aquecimento", series: "20 min", obs: "Z1-Z2" },
+      { nome: "Bloco moderado", series: "20 min", obs: "Z3 constante" },
+      { nome: "Bloco forte", series: "20 min", obs: "Progredir até Z4" },
+      { nome: "Desaquecimento", series: "10 min", obs: "Trocar respiração + soltura" },
     ],
   },
 ];
