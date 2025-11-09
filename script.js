@@ -20,7 +20,7 @@ const treinos = [
     tipo: "corrida",
     exercicios: [
       { nome: "Aquecimento", series: "15 min", obs: "Trote + mobilidade" },
-      { nome: "Tiros de 400m", series: "12x", obs: "Ritmo 3K; 1’30 trote leve entre" },
+      { nome: "Tiros de 400m", series: "6x", obs: "Ritmo 3K; 1’30 trote leve entre" },
       { nome: "Desaquecimento", series: "10 min", obs: "Trote leve e alongamento" },
     ],
   },
@@ -32,7 +32,7 @@ const treinos = [
     tipo: "bike",
     exercicios: [
       { nome: "Aquecimento", series: "15 min", obs: "Cadência crescente até 95 rpm" },
-      { nome: "Bloco principal", series: "90 min", obs: "20 min Z2 + 5x(5 min Z3 + 3 min Z2)" },
+      { nome: "Bloco principal", series: "60 min", obs: "20 min Z2 + 5x(5 min Z3 + 3 min Z2)" },
       { nome: "Desaquecimento", series: "10 min", obs: "Giro leve 85–90 rpm" },
     ],
   },
@@ -43,7 +43,7 @@ const treinos = [
     objetivo: "Treinar pernas pesadas e correr após carga alta",
     tipo: "brick",
     exercicios: [
-      { nome: "Bike contínua", series: "50 min", obs: "Z3 ritmado, intensidade forte e constante" },
+      { nome: "Bike contínua", series: "30 min", obs: "Z3 ritmado, intensidade forte e constante" },
       { nome: "Transição (T2)", series: "2 min", obs: "Cronometrada; velocidade total" },
       { nome: "Corrida pós-bike", series: "20 min", obs: "Ritmo de 5K; cadência alta" },
     ],
@@ -68,9 +68,9 @@ const treinos = [
     objetivo: "Aumentar força específica para ciclismo competitivo",
     tipo: "bike",
     exercicios: [
-      { nome: "Aquecimento", series: "20 min", obs: "Z2 constante" },
+      { nome: "Aquecimento", series: "10 min", obs: "Z2 constante" },
       { nome: "Subidas", series: "8x2 min", obs: "75 rpm sentado; torque máximo; recuperação 1:30" },
-      { nome: "Desaquecimento", series: "20 min", obs: "Soltando com cadência leve" },
+      { nome: "Desaquecimento", series: "10 min", obs: "Soltando com cadência leve" },
     ],
   },
 
@@ -80,7 +80,7 @@ const treinos = [
     objetivo: "Trabalhar aparato cardiovascular e controle de esforço",
     tipo: "corrida",
     exercicios: [
-      { nome: "Aquecimento", series: "20 min", obs: "Z1-Z2" },
+      { nome: "Aquecimento", series: "10 min", obs: "Z1-Z2" },
       { nome: "Bloco moderado", series: "20 min", obs: "Z3 constante" },
       { nome: "Bloco forte", series: "20 min", obs: "Progredir até Z4" },
       { nome: "Desaquecimento", series: "10 min", obs: "Trocar respiração + soltura" },
